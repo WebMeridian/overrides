@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <WebMeridian_Megamenu>
+            <version>1.0.0</version>
+        </WebMeridian_Megamenu>
+    </modules>
+    <global>
+        <blocks>
+            <megamenu>
+                <rewrite>
+                    <navigation>WebMeridian_Megamenu_Block_Navigation</navigation>
+                    <!-- v1.4-1.6 -->
+                </rewrite>
+            </megamenu>
+            <!--megamenu>
+                <class>Smartwave_Megamenu_Block</class>
+            </smartmegamenu-->
+        </blocks>
+
+    </global>
+
+</config>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <WebMeridian_Megamenu>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Smartwave_Megamenu/>
+            </depends>
+        </WebMeridian_Megamenu>
+        <WebMeridian_Override>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Sales/>
+                <WebMeridian_Shipping/>
+            </depends>
+        </WebMeridian_Override>
+    </modules>
+</config>

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <WebMeridian_Override>
+            <version>1.0.0</version>
+        </WebMeridian_Override>
+    </modules>
+
+    <global>
+        <models>
+            <webmeridian_override>
+                <class>WebMeridian_Override_Model</class>
+            </webmeridian_override>
+            <sales>
+                <rewrite>
+                    <order>WebMeridian_Override_Model_Order</order>
+                </rewrite>
+            </sales>
+        </models>
+        <template>
+        		<email>
+          			<sales_email_report module="WebMeridian_Override">
+            				<label>Send  email to admin</label>
+            				<file>sales_email_report.html</file>
+            				<type>html</type>
+          			</sales_email_report>
+        		</email>
+        </template>
+        <resources>
+            <logicmind_setup>
+                <setup>
+                    <module>WebMeridian_Override</module>
+                    <class>Mage_Customer_Model_Resource_Setup</class>
+                </setup>
+            </logicmind_setup>
+        </resources>
+    </global>
+    <crontab>
+        <jobs>
+            <webmeridian_override_crontab>
+                <schedule><cron_expr>*/5 * * * *</cron_expr></schedule>
+                <run><model>webmeridian_override/order::overrideSpesialPriceAfterImport</model></run>
+            </webmeridian_override_crontab>
+        </jobs>
+    </crontab>
+</config>
